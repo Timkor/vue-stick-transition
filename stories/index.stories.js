@@ -6,6 +6,8 @@ import { linkTo } from '@storybook/addon-links';
 
 import MyButton from './MyButton';
 import Welcome from './Welcome';
+import LogoPage from './LogoPage.vue';
+import Logo from './Logo.vue';
 
 storiesOf('Welcome', module).add('to Storybook', () => ({
   components: { Welcome },
@@ -33,4 +35,11 @@ storiesOf('Button', module)
     methods: { action: action('clicked') },
   }));
 
+
+  storiesOf('Test', module)
+  .add('do test', () => ({
+    components: { LogoPage },
+    template: '<LogoPage></LogoPage>',
+    methods: { action: action('clicked') },
+  }));
 /* eslint-enable react/react-in-jsx-scope */
