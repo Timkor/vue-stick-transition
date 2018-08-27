@@ -1,0 +1,19 @@
+{
+  "name": "vue-stick-transition",
+  "version": "1.0.1",
+  "description": "Apply transitions on sticky elements",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Timkor/vue-stick-transition.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Timkor/vue-stick-transition/issues"
+  },
+  "homepage": "https://github.com/Timkor/vue-stick-transition#readme"
+}
