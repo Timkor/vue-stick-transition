@@ -55,6 +55,7 @@
 
         mounted() {
             this.eventListener = () => {
+
                 if (!this.isScrolling && isScrollingNext()) {
                     this.isScrolling = true;
 
@@ -66,13 +67,17 @@
 
                     this.$refs.stickTransition.reset();
                 }
+
+                
             };
 
             window.addEventListener('scroll', this.eventListener);
+            window.addEventListener('resize', this.eventListener);
         },
 
         beforeDestroy() {
             window.removeEventListener('scroll', this.eventListener);
+            window.removeEventListener('resize', this.eventListener);
         },
 
         methods: {
@@ -107,7 +112,14 @@
         flex-direction: row;
         align-content: center;
         padding: 10px;
-
+        z-index: 999;
+        
+        .logo {
+            width: 40px;
+            height: 40px;
+            opacity: 0;
+        }
+        
         nav {
             transition: margin-left .6s ease;
             margin-left: -40px;
@@ -121,34 +133,44 @@
             color: dodgerblue;
         }
     }
-
-    #menu .logo {
-        width: 40px;
-        height: 40px;
+    
+    .source .logo {
         opacity: 0;
     }
 
-    .scrolling #menu {
-        transition: background-color .4s ease;
-        background-color: white;
+    .text {
+        transition: transform .4s ease;
+        transform: translateX(0);
+    }
 
-        nav {
-            margin-left: 0;
-            transition: margin-left .6s .2s ease-out;
+    .scrolling {
+        #menu {
+            transition: background-color .4s ease;
+            background-color: white;
+
+            nav {
+                margin-left: 0;
+                transition: margin-left .6s .2s ease-out;
+            }
+        }
+
+        #menu .logo {
+            opacity: 1;
+            transition: opacity 0s .8s;
+        }
+
+        .text {
+            transform: translateX(-200px);
+        }
+
+        .source .logo {
+            opacity: 0;
         }
     }
-    .scrolling .logo {
-        opacity: 1;
-        transition: opacity 0 .8s;
-        
-    }
-
-    .scrolling .source .logo {
-        opacity: 0;
-    }
+    
     
     #intro {
-        height: 80vh;
+        height: 400px;
         background: #f0f0f0;
         
         display: flex;
@@ -158,7 +180,7 @@
 
         .content {
             
-            min-height: 100vh;
+            min-height: 400px;
             display: flex;
             justify-content: center;
             align-items: center;

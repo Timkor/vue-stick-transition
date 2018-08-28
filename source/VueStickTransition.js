@@ -108,7 +108,8 @@ export default {
                 left: this.x + 'px',
                 top: this.y + 'px',
                 transform: `translate(${this.translateX}px, ${this.translateY}px) scale(${this.scaleX}, ${this.scaleY})`,
-                transition: transition
+                transition: transition,
+                zIndex: 999999
             }
         }
     },
@@ -217,7 +218,7 @@ export default {
             this.translateY = 0;
             this.scaleX = 1;
             this.scaleY = 1;
-            
+
             nextFrame(() => {
                 if (this.prepare) {
                     this.prepareEnter();
