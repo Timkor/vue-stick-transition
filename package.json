@@ -24,11 +24,13 @@
     "vue-template-compiler": "^2.5.17"
   },
   "devDependencies": {
-    "@storybook/vue": "^3.4.10",
     "@storybook/addon-actions": "^3.4.10",
     "@storybook/addon-links": "^3.4.10",
     "@storybook/addons": "^3.4.10",
+    "@storybook/vue": "^3.4.10",
     "babel-core": "^6.26.3",
-    "babel-preset-vue": "^2.0.2"
+    "babel-preset-vue": "^2.0.2",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0"
   }
 }

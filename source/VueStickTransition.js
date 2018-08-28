@@ -207,20 +207,22 @@ export default {
             nextFrame(() => {
                 this.state = State.LEAVE_TO;
 
-                this.translateX = 0;
-                this.translateY = 0;
-                this.scaleX = 1;
-                this.scaleY = 1;
-
                 this.$emit('after-leave');
-                
-                nextFrame(() => {
-                    if (this.prepare) {
-                        this.prepareEnter();
-                    }
-                });
             });
         },
 
+        reset() {
+
+            this.translateX = 0;
+            this.translateY = 0;
+            this.scaleX = 1;
+            this.scaleY = 1;
+            
+            nextFrame(() => {
+                if (this.prepare) {
+                    this.prepareEnter();
+                }
+            });
+        }
     }
 }
