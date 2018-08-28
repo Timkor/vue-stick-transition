@@ -38,7 +38,7 @@ function nextFrame(callback) {
 
 export default {
     
-    template: '<div class="transition" :class="classes"><div ref="source" class="source"><slot /></div><div ref="clone" class="clone" :style="cloneStyle"></div></div></div>',
+    template: `<div class="transition" :class="classes"><div ref="source" class="source"><slot /></div><div ref="clone" class="clone" :style="cloneStyle"></div></div></div>`,
     
     props: {
         name: {

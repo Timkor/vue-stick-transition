@@ -1,6 +1,6 @@
 {
   "name": "vue-stick-transition",
-  "version": "1.0.3",
+  "version": "1.0.6",
   "description": "Apply transitions on sticky elements",
   "main": "dist/index.js",
   "scripts": {
@@ -18,11 +18,7 @@
     "url": "https://github.com/Timkor/vue-stick-transition/issues"
   },
   "homepage": "https://github.com/Timkor/vue-stick-transition#readme",
-  "dependencies": {
-    "vue": "^2.5.17",
-    "vue-loader": "^15.4.1",
-    "vue-template-compiler": "^2.5.17"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",
@@ -34,7 +30,11 @@
     "@storybook/vue": "^3.4.10",
     "babel-core": "^6.26.3",
     "babel-preset-vue": "^2.0.2",
+    "babel-plugin-transform-vue-template": "^0.4.2",
     "less": "^3.8.1",
-    "less-loader": "^4.1.0"
+    "less-loader": "^4.1.0",
+    "vue": "^2.5.17",
+    "vue-loader": "^15.4.1",
+    "vue-template-compiler": "^2.5.17"
   }
 }

@@ -41,7 +41,26 @@ function nextFrame(callback) {
 }
 
 var _default = {
-  template: '<div class="transition" :class="classes"><div ref="source" class="source"><slot /></div><div ref="clone" class="clone" :style="cloneStyle"></div></div></div>',
+  render: function render() {
+    var _vm = this;
+
+    var _h = _vm.$createElement;
+
+    var _c = _vm._self._c || _h;
+
+    return _c('div', {
+      staticClass: "transition",
+      class: _vm.classes
+    }, [_c('div', {
+      ref: "source",
+      staticClass: "source"
+    }, [_vm._t("default")], 2), _c('div', {
+      ref: "clone",
+      staticClass: "clone",
+      style: _vm.cloneStyle
+    })]);
+  },
+  staticRenderFns: [],
   props: {
     name: {
       type: String,
