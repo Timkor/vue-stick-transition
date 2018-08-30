@@ -37,8 +37,8 @@ storiesOf('Button', module)
   }));
 */
 
-  storiesOf('Test', module)
-  .add('do test', () => ({
+  storiesOf('Examples', module)
+  .add('Logo transition on scroll', () => ({
     components: { LogoPage },
     template: '<LogoPage></LogoPage>',
     methods: { action: action('clicked') },
