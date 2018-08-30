@@ -1,13 +1,13 @@
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
 
-var _VueStickTransition = _interopRequireDefault(require("./VueStickTransition"));
+var _VueStickTransition = require('./VueStickTransition');
+
+var _VueStickTransition2 = _interopRequireDefault(_VueStickTransition);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _default = _VueStickTransition.default;
-exports.default = _default;
+exports.default = _VueStickTransition2.default;
